@@ -1,7 +1,7 @@
-# Zathura configuration file
-# See man `man zathurarc'
+# Arquivo de configuração do Zathura
+# Tema escuro inspirado no Gruvbox
 
-# Open document in fit-width mode by default
+# fit-width
 set adjust-open "best-fit"
 
 # One page per row by default
@@ -12,49 +12,32 @@ set scroll-page-aware "true"
 set scroll-full-overlap 0.01
 set scroll-step 100
 
-#zoom settings
-set zoom-min 10
+# Configurações gerais
 set guioptions ""
 
-# zathurarc-dark
+# Cores do tema Gruvbox escuro
+set recolor true  # Ativa o recoloring (tema escuro)
+set recolor-lightcolor "#282828"  # Cor de fundo (background)
+set recolor-darkcolor "#ebdbb2"   # Cor do texto (foreground)
 
-set font "inconsolata 15"
-set default-bg rgba(0,0,0,0.7) #00
-set default-fg "#F7F7F6" #01
+# Cores para realces e seleções
+set recolor-keephue true  # Mantém as cores originais para imagens
+set default-bg "#282828"  # Cor de fundo padrão
+set default-fg "#ebdbb2"  # Cor do texto padrão
+set inputbar-bg "#3c3836" # Cor de fundo da barra de entrada
+set inputbar-fg "#ebdbb2" # Cor do texto da barra de entrada
+set statusbar-bg "#3c3836" # Cor de fundo da barra de status
+set statusbar-fg "#ebdbb2" # Cor do texto da barra de status
+set notification-bg "#3c3836" # Cor de fundo das notificações
+set notification-fg "#ebdbb2" # Cor do texto das notificações
+set completion-bg "#3c3836"   # Cor de fundo do autocompletar
+set completion-fg "#ebdbb2"   # Cor do texto do autocompletar
+set completion-highlight-bg "#458588" # Cor de fundo do item selecionado no autocompletar
+set completion-highlight-fg "#ebdbb2" # Cor do texto do item selecionado no autocompletar
+set index-bg "#282828"        # Cor de fundo do índice
+set index-fg "#ebdbb2"        # Cor do texto do índice
+set index-active-bg "#458588" # Cor de fundo do item ativo no índice
+set index-active-fg "#ebdbb2" # Cor do texto do item ativo no índice
 
-set statusbar-fg "#B0B0B0" #04
-set statusbar-bg "#202020" #01
-
-set inputbar-bg "#151515" #00 currently not used
-set inputbar-fg "#FFFFFF" #02
-
-set notification-error-bg "#AC4142" #08
-set notification-error-fg "#151515" #00
-
-set notification-warning-bg "#AC4142" #08
-set notification-warning-fg "#151515" #00
-
-set highlight-color "#F4BF75" #0A
-set highlight-active-color "#6A9FB5" #0D
-
-set completion-highlight-fg "#151515" #02
-set completion-highlight-bg "#90A959" #0C
-
-set completion-bg "#303030" #02
-set completion-fg "#E0E0E0" #0C
-
-set notification-bg "#90A959" #0B
-set notification-fg "#151515" #00
-
-set recolor "true"
-set recolor-lightcolor rgba(0,0,0,0) #00
-set recolor-darkcolor "#E0E0E0" #06
-set recolor-reverse-video "true"
-set recolor-keephue "true"
-
-
-set render-loading "false"
-set scroll-step 50
-unmap f
-map f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
+# Atalhos personalizados
+map i recolor  # Alterna entre o tema escuro e o original (aperte 'i')
